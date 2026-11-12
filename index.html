@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brady Kirtland</title>
+<meta name="description" content="Brady Kirtland — builder of small, useful software." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#9889;</text></svg>" />
+<style>
+  :root {
+    --bg: #14100e;
+    --panel: #1d1715;
+    --ink: #f2e9e2;
+    --muted: #b3a196;
+    --line: #342a26;
+    --accent: #d9a05b;
+    --maxw: 940px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #faf6f2;
+      --panel: #ffffff;
+      --ink: #1d1715;
+      --muted: #6b5d54;
+      --line: #e7ddd4;
+      --accent: #a9701f;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #faf6f2; --panel: #ffffff; --ink: #1d1715;
+    --muted: #6b5d54; --line: #e7ddd4; --accent: #a9701f;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 ui-sans-serif, -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+
+  /* ---------- hero ---------- */
+  header.hero { padding: clamp(40px, 9vw, 96px) 0 clamp(32px, 6vw, 64px); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    gap: clamp(24px, 5vw, 56px);
+    align-items: center;
+  }
+  .eyebrow {
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px;
+  }
+  h1 {
+    margin: 0 0 18px;
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    font-weight: 650;
+  }
+  .lede { margin: 0; font-size: clamp(1.02rem, 2.4vw, 1.18rem); color: var(--muted); max-width: 46ch; }
+
+  .portrait {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 50px -24px rgba(0,0,0,.65);
+    background: var(--panel);
+  }
+  figure.portrait-fig { margin: 0; }
+  figcaption { margin-top: 10px; font-size: 12.5px; color: var(--muted); text-align: center; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .btn {
+    display: inline-block; text-decoration: none;
+    padding: 10px 18px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--ink);
+    font-size: 14.5px; font-weight: 550;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #14100e; }
+
+  /* ---------- sections ---------- */
+  section { padding: clamp(32px, 6vw, 56px) 0; border-top: 1px solid var(--line); }
+  h2 {
+    margin: 0 0 24px; font-size: 13px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--muted); font-weight: 600;
+  }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; padding: 22px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 1.1rem; letter-spacing: -0.01em; }
+  .card p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 12px; padding: 3px 9px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--muted);
+  }
+  .prose { max-width: 62ch; color: var(--muted); }
+  .prose strong { color: var(--ink); font-weight: 600; }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+
+  @media (max-width: 720px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .portrait-fig { order: -1; max-width: 260px; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Brady Kirtland</p>
+      <h1>I build small software that actually gets used.</h1>
+      <p class="lede">
+        Mostly practical tools for real teams — inventory, tracking, the unglamorous
+        stuff that saves someone an hour a week. React and TypeScript on the front,
+        Supabase behind it, shipped to the web and the App Store.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#work">See the work</a>
+        <a class="btn" href="https://github.com/bradyk123">GitHub</a>
+      </div>
+    </div>
+    <figure class="portrait-fig">
+      <img class="portrait" src="img/portrait.png" alt="Caricature portrait" />
+      <figcaption>Not a photograph. Close enough.</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main>
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Curtis App</h3>
+          <p>
+            Equipment and inventory tracking for a track &amp; field program. Built from
+            a pile of spreadsheets into a real app — search, categories, counts, and
+            a native iOS build headed for the App Store.
+          </p>
+          <div class="tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span>
+            <span class="tag">Vite</span><span class="tag">Supabase</span>
+            <span class="tag">Capacitor / iOS</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>This site</h3>
+          <p>
+            One hand-written HTML file, no build step, no dependencies. Hosted free on
+            GitHub Pages. Loads instantly and will still work in ten years.
+          </p>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span>
+            <span class="tag">GitHub Pages</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Next up</h3>
+          <p>
+            Room here for whatever comes after. Replace this card when the next thing
+            ships — it's just markup in <code>index.html</code>.
+          </p>
+          <div class="tags"><span class="tag">In progress</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p class="prose">
+        I'm a builder who prefers <strong>finished</strong> over clever. A tool that one
+        coach opens every Tuesday beats an architecture diagram nobody runs. That means
+        shipping early, cutting scope hard, and letting the people who use the thing tell
+        me what's wrong with it.
+      </p>
+      <p class="prose">
+        Comfortable across the stack: React and TypeScript on the front end, Postgres and
+        Supabase behind it, Capacitor when it needs to live on a phone, and whatever glue
+        the job requires in between.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="prose">
+        Best reached through <a href="https://github.com/bradyk123">GitHub</a>.
+        Add an email or links here any time — they live near the bottom of
+        <code>index.html</code>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Brady Kirtland</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
