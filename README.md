@@ -11,7 +11,7 @@ Everything is in `index.html`:
 
 - Headline and intro — the `<header class="hero">` block
 - Projects — the three `<article class="card">` blocks under `#work`
-- About / Contact — the `#about` and `#contact` sections
+- About / Elsewhere — the `#about` and `#contact` sections
 - Colors — the CSS variables at the top of `<style>` (light and dark both defined)
 
 The portrait lives at `img/portrait.png`. Swap that file to change it.
